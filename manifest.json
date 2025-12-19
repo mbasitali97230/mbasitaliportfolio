@@ -1,0 +1,8 @@
+{
+ "name":"Basit Ali Portfolio",
+ "short_name":"BasitAli",
+ "display":"standalone",
+ "start_url":"/",
+ "theme_color":"#f4b400",
+ "background_color":"#0f0f0f"
+}

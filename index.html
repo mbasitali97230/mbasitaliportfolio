@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M Basit Ali – Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4J5c+o5g2e+X9qC0f9XK7k1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Basit Ali – Web Developer & Graphic Designer Portfolio"
+    />
+
+    <!-- GA4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXX");
+    </script>
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#f4b400" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <span class="dot"></span>
+        <strong id="basit">Basit Ali</strong>
+        <span class="role">shams</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav desktop-nav">
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="profile-image">
+          <img src="./images/profile/basitali1.webp" alt="Basit Ali" />
+        </div>
+
+        <div class="content">
+          <h1>Hello,<span id="heroText">Basit Ali</span></h1>
+
+          <h3 class="changing-text">
+            <span id="roleText">Web Developer</span>
+          </h3>
+          <p id="mbasitpara">
+            I am a professional individual with experience in my field. This
+            portfolio presents my resume, projects, and contact details in a
+            clean and modern way.
+          </p>
+
+          <div class="buttons">
+            <a href="#resume" class="btn resume">Resume</a>
+            <a href="#projects" class="btn projects">Projects</a>
+            <a href="#contact" class="btn contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project section start -->
+    <section class="projects-section" id="projects">
+      <h2 class="section-title">my Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Projects section card 1 -->
+        <div class="project-item" data-aos="fade-up">
+          <img src="./images/projects/alhassan e-commerce site.webp" alt="al-hassan e-commerce website project" />
+
+          <div class="project-overlay">
+            <div class="project-actions">
+              <a href="#" target="_blank" aria-label="Live">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                  />
+                  <path d="M5 5h6V3H3v8h2V5z" />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 2.5.7 3.1-1 .1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C16.7 4.7 17.7 5 17.7 5c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v6.2h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projects section card 2 -->
+        <div class="project-item" data-aos="fade-up">
+          <img src="./images/projects/alhassan e-commerce site.webp" alt="Project" />
+
+          <div class="project-overlay">
+            <div class="project-actions">
+              <a href="#" target="_blank" aria-label="Live">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                  />
+                  <path d="M5 5h6V3H3v8h2V5z" />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 2.5.7 3.1-1 .1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C16.7 4.7 17.7 5 17.7 5c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v6.2h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Projects section card 3 -->
+        <div class="project-item" data-aos="fade-up">
+          <img src="./images/projects/alhassan e-commerce site.webp" alt="Project" />
+
+          <div class="project-overlay">
+            <div class="project-actions">
+              <a href="#" target="_blank" aria-label="Live">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                  />
+                  <path d="M5 5h6V3H3v8h2V5z" />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 2.5.7 3.1-1 .1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C16.7 4.7 17.7 5 17.7 5c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v6.2h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects section card 4 -->
+        <div class="project-item" data-aos="fade-up">
+          <img src="./images/projects/alhassan e-commerce site.webp" alt="Project" />
+
+          <div class="project-overlay">
+            <div class="project-actions">
+              <a href="#" target="_blank" aria-label="Live">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                  />
+                  <path d="M5 5h6V3H3v8h2V5z" />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 2.5.7 3.1-1 .1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C16.7 4.7 17.7 5 17.7 5c.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 0 0 2.5 6a2.5 2.5 0 0 0 2.48 2.5A2.5 2.5 0 0 0 7.5 6a2.5 2.5 0 0 0-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v6.2h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- new project section past here -->
+      </div>
+    </section>
+
+    <!-- project section end -->
+
+    <!-- Thumbnail Section start -->
+    <section class="thumbnail-section" id="projects">
+      <h2 class="section-title">Thumbnails & Posters</h2>
+
+      <div class="thumbnail-grid">
+        <!--  thumbnail card 1 -->
+        <div class="thumbnail-item" data-aos="fade-up">
+          <img src="./images/thumbnails/BASIT-ALI-NEW-BG-FOR-LAPTOP.webp" alt="thubnail 1" />
+
+          <div class="thumbnail-overlay">
+            <div class="thumbnail-actions">
+              <a href="#" class="action-btn view" aria-label="View Design">
+                View
+              </a>
+
+              <a href="#" class="action-btn download" aria-label="Download PSD">
+                PSD
+              </a>
+
+              <a href="#" class="action-btn order" aria-label="Design Now">
+                Design
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- thumbnail card 1 end -->
+
+        <!--  thumbnail card 1 -->
+        <div class="thumbnail-item" data-aos="fade-up">
+          <img src="./images/thumbnails/a-gpgc.webp" alt="thubnail 1" />
+
+          <div class="thumbnail-overlay">
+            <div class="thumbnail-actions">
+              <a href="#" class="action-btn view" aria-label="View Design">
+                View
+              </a>
+
+              <a href="#" class="action-btn download" aria-label="Download PSD">
+                PSD
+              </a>
+
+              <a href="#" class="action-btn order" aria-label="Design Now">
+                Design
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- new project section past here -->
+      </div>
+    </section>
+    <!--  -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-col" data-aos="fade-up">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:basitali@email.com">basitali@email.com</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-linkedin"></i>
+              <a
+                href="https://linkedin.com/in/basitali"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="150">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#thumbnails">Thumbnails</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col footer-social" data-aos="zoom-in">
+          <h4>Follow</h4>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+
+          <div class="footer-cta">
+            <a href="#contact" class="hire-btn">Hire Me</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="footer-form" data-aos="fade-up">
+        <form action="https://formspree.io/f/xqezzvbz" method="POST">
+          <label> Your email: <input type="email" name="email" /> </label>
+          <label> Your message: <textarea name="message"></textarea></label>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
+
+        <p class="form-success">✅ Message sent successfully</p>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="footer-year"></span> Basit Ali. All Rights Reserved.
+        <span class="powered-by">Powered by <strong>Basit Ali</strong></span>
+      </div>
+    </footer>
+    <a
+      href="https://wa.me/923001234567?text=Hi%20Basit%2C%20I%20saw%20your%20portfolio"
+      class="floating-whatsapp"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button class="back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- External libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Your JS -->
+    <script src="./js/script.js"></script>
+
+    <!-- Init -->
+    <script>
+      AOS.init({
+        duration: 900,
+        once: true,
+      });
+    </script>
+
+    <!-- SEO Schema (safe anywhere) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Basit Ali",
+        "jobTitle": "Web Developer & Graphic Designer",
+        "url": "https://yourwebsite.com",
+        "sameAs": [
+          "https://linkedin.com/in/basitali",
+          "https://instagram.com/yourprofile"
+        ]
+      }
+    </script>
+  </body>
+</html>
