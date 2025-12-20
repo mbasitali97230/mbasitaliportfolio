@@ -155,3 +155,32 @@ const yearEl = document.getElementById("footer-year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+/* =====================================================
+   HIRE ME MODAL
+===================================================== */
+const hireBtn = document.querySelector(".hire-btn");
+const hireModal = document.getElementById("hireModal");
+const hireClose = document.querySelector(".hire-close");
+
+if (hireBtn && hireModal) {
+  hireBtn.addEventListener("click", e => {
+    e.preventDefault();
+    hireModal.classList.add("show");
+    document.body.classList.add("no-scroll");
+  });
+}
+
+if (hireClose) {
+  hireClose.addEventListener("click", () => {
+    hireModal.classList.remove("show");
+    document.body.classList.remove("no-scroll");
+  });
+}
+
+window.addEventListener("click", e => {
+  if (e.target === hireModal) {
+    hireModal.classList.remove("show");
+    document.body.classList.remove("no-scroll");
+  }
+});
