@@ -832,7 +832,7 @@ body.dark .footer-social .social-icons a {
     text-align: center;
   }
 }
-@media (hover: none) {
+/* @media (hover: none) {
   .thumbnail-overlay {
     opacity: 1;
   }
@@ -841,7 +841,7 @@ body.dark .footer-social .social-icons a {
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .desktop-nav {
