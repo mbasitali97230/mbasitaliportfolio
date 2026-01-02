@@ -75,9 +75,10 @@ body.dark {
 }
 
 /* Optional: hide scrollbar during preload */
-body.preloading {
+body.preloading  {
   overflow: hidden;
 }
+
 /* end loader */
 
 
