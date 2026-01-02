@@ -11,6 +11,77 @@ body.dark {
   --overlay: rgba(0, 0, 0, 0.75);
 }
 
+/* ===== Preloader ===== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.preloader-content {
+  text-align: center;
+  color: white;
+}
+
+.preloader-content .dot {
+  width: 32px;
+  height: 32px;
+  background: #f4b400;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 24px;
+  animation: pulseDot 2s infinite;
+}
+
+#preloader-name {
+  font-family: 'Supermercado One', cursive;
+  font-size: 2.8rem;
+  margin: 0;
+  opacity: 0;
+  animation: fadeInText 1.2s 0.3s forwards;
+}
+
+#preloader-role {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 8px;
+  opacity: 0;
+  animation: fadeInText 1.2s 0.8s forwards;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade out effect */
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Optional: hide scrollbar during preload */
+body.preloading {
+  overflow: hidden;
+}
+/* end loader */
+
+
+
 /* Apply variables */
 .project-overlay {
   background: var(--overlay);

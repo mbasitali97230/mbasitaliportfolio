@@ -21,6 +21,17 @@ if (toggle && menu) {
   });
 }
 
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  
+  // Small delay for better UX (even if instantly loaded)
+  setTimeout(() => {
+    preloader.classList.add('hide');
+    document.body.classList.remove('preloading');
+  }, 1200); // Adjust timing if needed
+});
+
 /* =====================================================
    HERO ROLE TEXT + PARAGRAPH ANIMATION
 ===================================================== */

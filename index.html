@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>M Basit Ali – Portfolio</title>
+    <title>Muhammad Basit Ali | Web Developer</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -21,10 +21,7 @@
     />
 
     <!-- SEO -->
-    <meta
-      name="description"
-      content="Basit Ali – Web Developer & Graphic Designer Portfolio"
-    />
+   <meta name="description" content="Portfolio website of Muhammad Basit Ali, Web Developer and Designer.">
 
     <!-- GA4 -->
     <script
@@ -47,7 +44,14 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#f4b400" />
   </head>
-
+  <!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="dot"></div>
+    <h1 id="preloader-name">Muhammad Basit Ali</h1>
+    <h3 id="preloader-role">Web Developer & Designer</h3>
+  </div>
+</div>
   <body>
     <header class="header">
       <div class="logo">
@@ -60,7 +64,7 @@
       <nav class="nav desktop-nav">
         <a href="#resume">Resume</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#contactformh">Contact</a>
       </nav>
 
       <!-- Mobile Toggle -->
@@ -75,7 +79,7 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="#resume">Resume</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#contactformh">Contact</a>
     </div>
 
     <section class="hero">
@@ -253,7 +257,7 @@
     <!-- project section end -->
 
     <!-- Thumbnail Section start -->
-    <section class="thumbnail-section" id="projects">
+    <section class="thumbnail-section" id="thumbnails">
       <h2 class="section-title">Thumbnails & Posters</h2>
 
       <div class="thumbnail-grid">
@@ -333,7 +337,7 @@
           <ul>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#thumbnails">Thumbnails</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contactformh">Contact</a></li>
           </ul>
         </div>
 
@@ -355,7 +359,7 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="footer-form" data-aos="fade-up">
+      <div class="footer-form" data-aos="fade-up" id="contactformh">
         <form action="https://formspree.io/f/xqezzvbz" method="POST">
           <label> Your email: <input type="email" name="email" /> </label>
           <label> Your message: <textarea name="message"></textarea></label>
