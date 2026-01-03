@@ -1096,3 +1096,139 @@ body.dark .footer-social .social-icons a {
 .project-item img {
   height: 300px;
 }
+@media (max-width: 360px) {
+
+  /* HEADER */
+  .header {
+    padding: 14px 16px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+
+  .mobile-menu a {
+    font-size: 18px;      /* pehle ~22px tha */
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+
+  /* Menu ke beech ka gap kam */
+  .mobile-menu {
+    gap: 20px;
+  }
+
+  .mobile-menu a {
+    font-size: 16px;
+  }
+
+  .logo strong {
+    font-size: 14px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .container {
+    gap: 24px;
+    padding: 16px;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .content h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  #heroText {
+    font-size: 20px;
+    word-spacing: normal;
+  }
+
+  .changing-text {
+    font-size: 14px;
+  }
+
+  #mbasitpara {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  /* BUTTONS FIX (MOST IMPORTANT) */
+  .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 65px;
+    height: 65px;
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  /* PROJECTS & THUMBNAILS */
+  .projects-grid,
+  .thumbnail-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-item img,
+  .thumbnail-item img {
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding: 50px 16px 30px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
+
+  /* FLOATING BUTTONS */
+ .floating-whatsapp {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 80px;
+    right: 16px;
+  }
+   /* PRELOADER FIX */
+  #preloader-name {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  #preloader-role {
+    font-size: 0.95rem;
+  }
+
+  .preloader-content .dot {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 16px;
+  }
+}

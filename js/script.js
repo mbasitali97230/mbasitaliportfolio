@@ -21,62 +21,33 @@ if (toggle && menu) {
   });
 }
 
-// // Preloader
-// window.addEventListener('load', () => {
-//   const preloader = document.getElementById('preloader');
-  
-//   // Small delay for better UX (even if instantly loaded)
-//   setTimeout(() => {
-//     preloader.classList.add('hide');
-//     document.body.classList.remove('preloading');
-//   }, 1200); // Adjust timing if needed
-// });
 
-// Preloader with WhatsApp button control
+// Preloader (CLEAN & RESPONSIVE SAFE)
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
   const whatsappBtn = document.getElementById('whatsappBtn');
 
-  // Hide WhatsApp immediately
+  // hide WhatsApp during loading
   if (whatsappBtn) {
     whatsappBtn.style.display = 'none';
   }
 
-  // After delay, fade out preloader & show WhatsApp with its original style
+  // remove loader after delay
   setTimeout(() => {
-    preloader.classList.add('hide');
+    if (preloader) {
+      preloader.classList.add('hide');
+    }
 
-    // Restore WhatsApp button with full styling after animation
-    setTimeout(() => {
-      if (whatsappBtn) {
-        whatsappBtn.style.display = 'flex'; // or 'block' — depends on your CSS
-        whatsappBtn.style.backgroundColor = '#25D366'; // WhatsApp green
-        whatsappBtn.style.borderRadius = '50%';
-        whatsappBtn.style.width = '60px';
-        whatsappBtn.style.height = '60px';
-        whatsappBtn.style.alignItems = 'center';
-        whatsappBtn.style.justifyContent = 'center';
-        whatsappBtn.style.position = 'fixed';
-        whatsappBtn.style.bottom = '20px';
-        whatsappBtn.style.right = '20px';
-        whatsappBtn.style.zIndex = '999';
-        whatsappBtn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-        whatsappBtn.style.cursor = 'pointer';
+    document.body.classList.remove('preloading');
 
-        // Optional: Add hover effect back
-        whatsappBtn.onmouseenter = () => {
-          whatsappBtn.style.transform = 'scale(1.1)';
-          whatsappBtn.style.transition = 'transform 0.2s ease';
-        };
-        whatsappBtn.onmouseleave = () => {
-          whatsappBtn.style.transform = 'scale(1)';
-        };
+    // show WhatsApp again (CSS will control size)
+    if (whatsappBtn) {
+      whatsappBtn.style.display = 'flex';
+    }
 
-        document.body.classList.remove('preloading');
-      }
-    }, 800); // Match with loader fade-out time
   }, 1200);
 });
+
 /* =====================================================
    HERO ROLE TEXT + PARAGRAPH ANIMATION
 ===================================================== */
