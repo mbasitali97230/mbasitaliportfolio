@@ -93,32 +93,32 @@ if (roleText && paraText) {
 /* =====================================================
    HERO MAIN TEXT LOOP
 ===================================================== */
-const messages = [
-  { text: "I’M Basit Ali", duration: 4000 },
-  { text: "Want to create a Website?", duration: 4000 },
-  { text: "Thumbnails, Posters & More", duration: 4000 }
-];
+// const messages = [
+//   { text: "I’M Basit Ali", duration: 4000 },
+//   { text: "Want to create a Website?", duration: 4000 },
+//   { text: "Thumbnails, Posters & More", duration: 4000 }
+// ];
 
-let msgIndex = 0;
-const heroText = document.getElementById("heroText");
+// let msgIndex = 0;
+// const heroText = document.getElementById("heroText");
 
-function changeHeroText() {
-  if (!heroText) return;
+// function changeHeroText() {
+//   if (!heroText) return;
 
-  heroText.style.opacity = 0;
+//   heroText.style.opacity = 0;
 
-  setTimeout(() => {
-    heroText.textContent = messages[msgIndex].text;
-    heroText.style.opacity = 1;
+//   setTimeout(() => {
+//     heroText.textContent = messages[msgIndex].text;
+//     heroText.style.opacity = 1;
 
-    setTimeout(() => {
-      msgIndex = (msgIndex + 1) % messages.length;
-      changeHeroText();
-    }, messages[msgIndex].duration);
+//     setTimeout(() => {
+//       msgIndex = (msgIndex + 1) % messages.length;
+//       changeHeroText();
+//     }, messages[msgIndex].duration);
 
-  }, 600);
-}
-changeHeroText();
+//   }, 600);
+// }
+// changeHeroText();
 
 /* =====================================================
    PROJECT CARD 3D HOVER (DESKTOP ONLY)
