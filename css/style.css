@@ -1208,13 +1208,19 @@ body.dark .footer-social .social-icons a {
     gap: 24px;
     padding: 16px;
   }
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
-  .profile-image img {
-    width: 220px;
-    height: 220px;
-    object-position: top;
-    object-fit: cover;
-  }
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 
   .content h1 {
     font-size: 20px;
@@ -1252,17 +1258,23 @@ body.dark .footer-social .social-icons a {
   /* PROJECTS & THUMBNAILS */
   .projects-grid,
   .thumbnail-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+   /* FORCE 2 COLUMNS – PROJECTS & THUMBNAILS */
+  .projects-grid,
+  .thumbnail-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
   }
 
   .project-item img,
   .thumbnail-item img {
-    height: 200px;
+    height: 140px;
   }
+}
 
   .section-title {
     font-size: 22px;
+    font-weight:600;
     margin-bottom: 28px;
   }
 
@@ -1302,4 +1314,59 @@ body.dark .footer-social .social-icons a {
     height: 22px;
     margin-bottom: 16px;
   }
+}
+
+/* FOOTER MOBILE FIX */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+  }
+.footer-col ul li {
+  justify-content: center;
+  font-size: 13px;
+}
+
+.footer-col ul li a {
+  font-size: 13px;
+}
+
+.footer-social .social-icons {
+  gap: 14px;
+}
+
+.footer-social .social-icons a {
+  width: 38px;
+  height: 38px;
+}
+
+.footer-form {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.footer-form label {
+  font-size: 12px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  font-size: 13px;
+  padding: 9px 12px;
+}
+
+.footer-form button {
+  font-size: 14px;
+  padding: 11px;
+}
+
+.footer-bottom {
+  margin-top: 36px;
+  font-size: 10.5px;
+  line-height: 1.4;
 }
