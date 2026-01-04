@@ -1057,14 +1057,14 @@ body.dark .footer-social .social-icons a {
   }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
 
-  /* GLOBAL TEXT SCALE */
+  /* GLOBAL TEXT SCALE 
   body {
     font-size: 30px;
   }
 
- /* HEADER */
+ /* HEADER 
   .header {
     padding: 14px 16px;
     position: relative;
@@ -1078,12 +1078,12 @@ body.dark .footer-social .social-icons a {
   }
 
   .mobile-menu a {
-    font-size: 18px;      /* pehle ~22px tha */
+    font-size: 18px;      /* pehle ~22px tha 
     line-height: 1.4;
     letter-spacing: 0.5px;
   }
 
-  /* Menu ke beech ka gap kam */
+  /* Menu ke beech ka gap kam 
   .mobile-menu {
     gap: 20px;
   }
@@ -1100,7 +1100,7 @@ body.dark .footer-social .social-icons a {
     font-size: 15px;
   }
 
-  /* HERO */
+  /* HERO 
   .container {
     gap: 24px;
     padding: 16px;
@@ -1126,7 +1126,7 @@ body.dark .footer-social .social-icons a {
     text-align: left;
   }
 
-  /* HERO IMAGE */
+  /* HERO IMAGE 
   .profile-image img {
     width: 270px;
     height: 270px;
@@ -1134,20 +1134,20 @@ body.dark .footer-social .social-icons a {
     object-position: top;
   }
 
-  /* BUTTONS */
+  /* BUTTONS *
   .btn {
     width: 64px;
     height: 64px;
     font-size: 11px;
   }
 
-  /* PROJECT IMAGES */
+  /* PROJECT IMAGES *
   .project-item img,
   .thumbnail-item img {
     height: 190px;
   }
 
-  /* FLOATING WHATSAPP (ANDROID SAFE) */
+  /* FLOATING WHATSAPP (ANDROID SAFE) *
   .floating-whatsapp {
     width: 42px;
     height: 42px;
@@ -1162,7 +1162,7 @@ body.dark .footer-social .social-icons a {
     bottom: 70px;
     right: 12px;
   }
-}
+} */
 
 
 @media (max-width: 360px) {
