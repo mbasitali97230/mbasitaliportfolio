@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input, button {
+  width: 260px;
+  padding: 10px;
+  margin: 6px 0;
+}
+button {
+  background: #f4b400;
+  border: none;
+  font-weight: bold;
+}
