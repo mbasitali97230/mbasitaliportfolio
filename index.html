@@ -114,6 +114,25 @@
         <a href="#projects">Projects</a>
         <a href="#contactformh">Contact</a>
       </nav>
+      <!-- ===============================
+     ACCOUNT MENU (DESKTOP)
+     =============================== -->
+<div class="account-menu" id="accountMenu">
+  <button id="accountBtn">Account</button>
+
+  <div class="account-dropdown" id="accountDropdown">
+    <a href="login.html" id="loginLink">Login</a>
+    <a href="signup.html" id="signupLink">Signup</a>
+
+    <!-- ADMIN ONLY -->
+    <a href="dashboard.html" id="dashboardLink" style="display:none">
+      Dashboard
+    </a>
+
+    <a href="#" id="logoutLink" style="display:none">Logout</a>
+  </div>
+</div>
+
 
       <!-- Mobile Toggle -->
       <div class="menu-toggle" id="menuToggle">
@@ -128,6 +147,14 @@
       <a href="#resume">Resume</a>
       <a href="#projects">Projects</a>
       <a href="#contactformh">Contact</a>
+      <!-- ===============================
+     ACCOUNT MENU (MOBILE)
+     =============================== -->
+    <a href="login.html" id="mLogin">Login</a>
+    <a href="signup.html" id="mSignup">Signup</a>
+    <a href="dashboard.html" id="mDashboard" style="display:none">Dashboard</a>
+    <a href="#" id="mLogout" style="display:none">Logout</a>
+
     </div>
 
     <section class="hero">
@@ -155,7 +182,7 @@
           </p>
 
           <div class="buttons">
-            <a href="#resume" class="btn resume">Resume</a>
+            <a href="#" id="resumeBtn" class="btn resume">Resume</a>
             <a href="#projects" class="btn projects">Projects</a>
             <a href="#contact" class="btn contact">Contact</a>
           </div>
@@ -325,9 +352,10 @@
                 View
               </a>
 
-              <a href="#" class="action-btn download" aria-label="Download PSD">
+              <a href="#" class="action-btn download" data-psd="/psd/design.psd">
                 PSD
               </a>
+
 
               <a href="#" class="action-btn order" aria-label="Design Now">
                 Design
@@ -347,7 +375,7 @@
                 View
               </a>
 
-              <a href="#" class="action-btn download" aria-label="Download PSD">
+               <a href="#" class="action-btn download" data-psd="/psd/design.psd">
                 PSD
               </a>
 
@@ -495,6 +523,11 @@
 
     <!-- Your JS -->
     <script src="./js/script.js"></script>
+    <!-- ===============================
+     ACCOUNT + AUTH LOGIC
+     =============================== -->
+    <script type="module" src="./js/account.js"></script>
+
 
     <!-- Init -->
     <script>

@@ -3,18 +3,31 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="./css/auth.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<h2>Login</h2>
+<div class="auth-card">
+  <h2>Login</h2>
 
-<input id="email" type="email">
-<input id="password" type="password">
+  <div class="input-group">
+    <input id="email" type="email" placeholder="Email">
+  </div>
 
-<button onclick="login()">Login</button>
+  <div class="input-group">
+    <input id="password" type="password" placeholder="Password">
+    <i class="fa-solid fa-eye toggle-password" data-target="password"></i>
+  </div>
 
-<p>No account? <a href="signup.html">Signup</a></p>
+  <button onclick="login()">Login</button>
+
+  <div class="auth-footer">
+    No account? <a href="signup.html">Signup</a>
+  </div>
+</div>
 
 <script type="module" src="./js/auth.js"></script>
+<script src="./js/password-toggle.js"></script>
 </body>
 </html>

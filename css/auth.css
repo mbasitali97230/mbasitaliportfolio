@@ -1,19 +1,95 @@
+/* ===============================
+   AUTH PAGES – PROFESSIONAL UI
+   =============================== */
+
 body {
-  font-family: Arial;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #f4b400, #10b981);
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
-input, button {
-  width: 260px;
-  padding: 10px;
-  margin: 6px 0;
+/* Card */
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  text-align: center;
 }
-button {
-  background: #f4b400;
+
+/* Title */
+.auth-card h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Input group */
+.input-group {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 44px 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #f4b400;
+}
+
+/* Eye icon */
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Button */
+.auth-card button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 30px;
   border: none;
-  font-weight: bold;
+  background: #f4b400;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  background: #10b981;
+  color: #fff;
+}
+
+/* Footer text */
+.auth-footer {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.auth-footer a {
+  color: #f4b400;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
 }
