@@ -50,11 +50,15 @@ async function loadUsers() {
     if (data.role === "admin") admins++;
     else normal++;
 
+    const createdDate = data.createdAt?.seconds
+      ? new Date(data.createdAt.seconds * 1000).toLocaleDateString()
+      : "—";
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${data.email}</td>
       <td>${data.role}</td>
-      <td>${new Date(data.createdAt.seconds * 1000).toLocaleDateString()}</td>
+      <td>${createdDate}</td>
     `;
     usersTable.appendChild(tr);
   });
