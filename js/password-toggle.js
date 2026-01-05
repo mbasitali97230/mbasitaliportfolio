@@ -1,7 +1,4 @@
-// ===============================
-// PASSWORD SHOW / HIDE
-// ===============================
-
+/* PASSWORD SHOW / HIDE */
 document.querySelectorAll(".toggle-password").forEach(icon => {
   icon.addEventListener("click", () => {
     const input = document.getElementById(icon.dataset.target);
