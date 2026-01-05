@@ -1,8 +1,6 @@
 import { auth, db } from "./firebase.js";
-import {
-  onAuthStateChanged,
-  signOut
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { onAuthStateChanged, signOut } from
+  "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 import {
   collection,
@@ -17,7 +15,9 @@ const totalAdminsEl = document.getElementById("totalAdmins");
 const totalNormalEl = document.getElementById("totalNormal");
 const logoutBtn = document.getElementById("logoutBtn");
 
-/* AUTH + ADMIN CHECK */
+/* =========================
+   AUTH + ADMIN CHECK
+========================= */
 onAuthStateChanged(auth, async (user) => {
   if (!user) {
     location.href = "login.html";
@@ -33,9 +33,11 @@ onAuthStateChanged(auth, async (user) => {
   loadUsers();
 });
 
-/* LOAD USERS */
+/* =========================
+   LOAD USERS
+========================= */
 async function loadUsers() {
-  const querySnapshot = await getDocs(collection(db, "users"));
+  const snapshot = await getDocs(collection(db, "users"));
 
   let total = 0;
   let admins = 0;
@@ -43,22 +45,23 @@ async function loadUsers() {
 
   usersTable.innerHTML = "";
 
-  querySnapshot.forEach(docSnap => {
+  snapshot.forEach(docSnap => {
     const data = docSnap.data();
     total++;
 
     if (data.role === "admin") admins++;
     else normal++;
 
-    const createdDate = data.createdAt?.seconds
-      ? new Date(data.createdAt.seconds * 1000).toLocaleDateString()
-      : "—";
+    const createdDate =
+      data.createdAt?.toDate
+        ? data.createdAt.toDate()
+        : new Date(data.createdAt);
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${data.email}</td>
       <td>${data.role}</td>
-      <td>${createdDate}</td>
+      <td>${createdDate.toLocaleDateString()}</td>
     `;
     usersTable.appendChild(tr);
   });
@@ -68,7 +71,9 @@ async function loadUsers() {
   totalNormalEl.textContent = normal;
 }
 
-/* LOGOUT */
+/* =========================
+   LOGOUT
+========================= */
 logoutBtn.addEventListener("click", () => {
   signOut(auth).then(() => {
     location.href = "login.html";
