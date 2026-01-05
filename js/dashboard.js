@@ -1,6 +1,9 @@
 import { auth, db } from "./firebase.js";
-import { onAuthStateChanged, signOut } from
-  "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+import {
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 import {
   collection,
@@ -15,9 +18,7 @@ const totalAdminsEl = document.getElementById("totalAdmins");
 const totalNormalEl = document.getElementById("totalNormal");
 const logoutBtn = document.getElementById("logoutBtn");
 
-/* =========================
-   AUTH + ADMIN CHECK
-========================= */
+/* AUTH + ADMIN CHECK */
 onAuthStateChanged(auth, async (user) => {
   if (!user) {
     location.href = "login.html";
@@ -33,11 +34,9 @@ onAuthStateChanged(auth, async (user) => {
   loadUsers();
 });
 
-/* =========================
-   LOAD USERS
-========================= */
+/* LOAD USERS */
 async function loadUsers() {
-  const snapshot = await getDocs(collection(db, "users"));
+  const querySnapshot = await getDocs(collection(db, "users"));
 
   let total = 0;
   let admins = 0;
@@ -45,13 +44,14 @@ async function loadUsers() {
 
   usersTable.innerHTML = "";
 
-  snapshot.forEach(docSnap => {
+  querySnapshot.forEach(docSnap => {
     const data = docSnap.data();
     total++;
 
     if (data.role === "admin") admins++;
     else normal++;
 
+    // ✅ DATE FIX (OLD + NEW USERS BOTH)
     const createdDate =
       data.createdAt?.toDate
         ? data.createdAt.toDate()
@@ -71,9 +71,7 @@ async function loadUsers() {
   totalNormalEl.textContent = normal;
 }
 
-/* =========================
-   LOGOUT
-========================= */
+/* LOGOUT */
 logoutBtn.addEventListener("click", () => {
   signOut(auth).then(() => {
     location.href = "login.html";

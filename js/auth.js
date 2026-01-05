@@ -9,22 +9,9 @@ import {
 
 import {
   doc,
-  setDoc
+  setDoc,
+  serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-/* LIVE PASSWORD VALIDATION */
-const passwordInput = document.getElementById("password");
-const passwordError = document.getElementById("passwordError");
-
-if (passwordInput && passwordError) {
-  passwordInput.addEventListener("input", () => {
-    if (passwordInput.value.length < 6) {
-      passwordError.classList.add("show");
-    } else {
-      passwordError.classList.remove("show");
-    }
-  });
-}
 
 /* SIGNUP */
 window.signup = async function () {
@@ -32,7 +19,7 @@ window.signup = async function () {
   const password = document.getElementById("password").value;
 
   if (password.length < 6) {
-    passwordError.classList.add("show");
+    alert("Password must be at least 6 characters");
     return;
   }
 
@@ -42,7 +29,7 @@ window.signup = async function () {
     await setDoc(doc(db, "users", cred.user.uid), {
       email: email,
       role: "user",
-      createdAt: new Date()
+      createdAt: serverTimestamp() // ✅ VERY IMPORTANT
     });
 
     window.location.href = "dashboard.html";
@@ -76,15 +63,11 @@ window.resetPassword = function () {
   const email = document.getElementById("email").value;
 
   if (!email) {
-    alert("Please enter your email first");
+    alert("Enter email first");
     return;
   }
 
   sendPasswordResetEmail(auth, email)
-    .then(() => {
-      alert("Password reset email sent. Check your inbox.");
-    })
-    .catch(err => {
-      alert(err.message);
-    });
+    .then(() => alert("Reset email sent"))
+    .catch(err => alert(err.message));
 };
