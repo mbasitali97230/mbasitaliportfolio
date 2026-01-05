@@ -1,40 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="robots" content="noindex, nofollow">
+
+  <link rel="stylesheet" href="./css/dashboard.css" />
 </head>
 <body>
 
-<h1>Admin Dashboard</h1>
-<p>Only admin can see this page</p>
+  <div class="admin-container">
 
-<button onclick="logout()">Logout</button>
+    <header class="admin-header">
+      <h1>Admin Dashboard</h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
 
-<script type="module">
-  import { auth, db } from "./js/firebase.js";
-  import { onAuthStateChanged, signOut } from
-    "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-  import { doc, getDoc } from
-    "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
+      </div>
 
-  onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-      location.href = "login.html";
-      return;
-    }
+      <div class="stat-card">
+        <h3>Admins</h3>
+        <p id="totalAdmins">0</p>
+      </div>
 
-    const snap = await getDoc(doc(db, "users", user.uid));
-    if (!snap.exists() || snap.data().role !== "admin") {
-      location.href = "/";
-    }
-  });
+      <div class="stat-card">
+        <h3>Normal Users</h3>
+        <p id="totalNormal">0</p>
+      </div>
+    </section>
 
-  window.logout = function () {
-    signOut(auth).then(() => {
-      location.href = "login.html";
-    });
-  };
-</script>
+    <!-- USERS TABLE -->
+    <section class="table-section">
+      <h2>Registered Users</h2>
 
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody id="usersTable">
+          <!-- Firebase data -->
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <script type="module" src="./js/dashboard.js"></script>
 </body>
 </html>
