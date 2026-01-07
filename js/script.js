@@ -213,3 +213,66 @@ window.addEventListener("click", e => {
 });
 
 
+/* =====================================================
+   HIRE FORM → GOOGLE SHEETS SUBMIT
+===================================================== */
+const hireForm = document.getElementById("hireForm");
+
+if (hireForm) {
+  hireForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    fetch("https://script.google.com/macros/s/AKfycbxbQPMzCCBJIk3DSf_r9SlWEXzTx5p8Spq_kyAQ4eNEldgnfkJTXz_ey2IskUhMlUw1/exec", {
+      method: "POST",
+      body: JSON.stringify({
+        your_name: "Muhammad Basit Ali",
+        client_name: hireForm.client_name.value,
+        client_email: hireForm.client_email.value,
+        service: hireForm.service.value,
+        message: hireForm.message.value
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert("Request submitted successfully!");
+      hireForm.reset();
+
+      // Close modal after submit
+      hireModal.classList.remove("show");
+      document.body.classList.remove("no-scroll");
+    })
+    .catch(error => {
+      alert("Something went wrong. Please try again.");
+      console.error(error);
+    });
+  });
+}
+
+/* =====================================================
+   FOOTER CONTACT FORM → GOOGLE SHEETS (FINAL FIX)
+===================================================== */
+const footerForm = document.getElementById("footerForm");
+const footerSuccess = document.querySelector(".form-success");
+
+if (footerForm) {
+  footerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(footerForm);
+
+    fetch("https://script.google.com/macros/s/AKfycbz3g2QZVMVYm-IrMDctNE4idqD4IxqcrxhfGnrwQPbHQ-kLgWS51O0u18bZcDHwvkW4/exec", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.text())
+    .then(() => {
+      footerForm.reset();
+      footerSuccess.style.display = "block";
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Message not sent. Please try again.");
+    });
+  });
+}
+

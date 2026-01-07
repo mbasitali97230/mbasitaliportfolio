@@ -74,7 +74,7 @@
     "muhammad basit ali",
     "muhammadbasitali"
   ],
-  
+
   "url": "https://muhammadbasitali.store/",
   "image": [
     "https://muhammadbasitali.store/images/profile/basitali.webp",
@@ -122,10 +122,10 @@
   }
 }
 </script>
-
-
   </head>
-  <!-- Preloader -->
+
+<body class="preloading">
+   <!-- Preloader -->
 <div id="preloader">
   <div class="preloader-content">
     <div class="dot"></div>
@@ -133,8 +133,8 @@
     <h3 id="preloader-role">Web Developer & Designer</h3>
   </div>
 </div>
-  <body>
-    <header class="header">
+
+<header class="header">
       <div class="logo">
         <span class="dot"></span>
         <strong id="basit">Basit Ali</strong>
@@ -147,50 +147,20 @@
         <a href="#projects">Projects</a>
         <a href="#contactformh">Contact</a>
       </nav>
-      <!-- ===============================
-     <!-- ACCOUNT MENU (DESKTOP)
-     =============================== 
-<div class="account-menu" id="accountMenu">
-  <button id="accountBtn">Account</button>
-
-  <div class="account-dropdown" id="accountDropdown">
-    <a href="login.html" id="loginLink">Login</a>
-    <a href="signup.html" id="signupLink">Signup</a>
-
-    <!-- ADMIN ONLY 
-    <a href="dashboard.html" id="dashboardLink" style="display:none">
-      Dashboard
-    </a>
-
-    <a href="#" id="logoutLink" style="display:none">Logout</a>
-  </div>
-</div> --->
-
-
       <!-- Mobile Toggle -->
       <div class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
-    </header>
-
+</header>
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
       <a href="#resume">Resume</a>
       <a href="#projects">Projects</a>
       <a href="#contactformh">Contact</a>
-      <!-- ===============================
-     <!-- ACCOUNT MENU (MOBILE)
-     =============================== 
-    <a href="login.html" id="mLogin">Login</a>
-    <a href="signup.html" id="mSignup">Signup</a>
-    <a href="dashboard.html" id="mDashboard" style="display:none">Dashboard</a>
-    <a href="#" id="mLogout" style="display:none">Logout</a>
-
-    </div> -->
-
-    <section class="hero">
+      </div>
+<section class="hero">
       <div class="container">
         <div class="profile-image">
            <img 
@@ -200,9 +170,8 @@
     height="400"
     loading="lazy"
   />
-        </div>
-
-        <div class="content">
+ </div>
+  <div class="content">
           <h1 id="heroText">I’m Basit Ali</h1>
 
           <h3 class="changing-text">
@@ -222,7 +191,7 @@
         </div>
       </div>
       
-    </section>
+  </section>
 
     <!-- Project section start -->
     <section class="projects-section " id="projects">
@@ -461,9 +430,9 @@
           <h4>Follow</h4>
 
           <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/mbasitalishams/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://bit.ly/3YWRyWa" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-tiktok"></i></a>
           </div>
 
@@ -475,7 +444,7 @@
 
       <!-- Contact Form -->
       <div class="footer-form" data-aos="fade-up" id="contactformh">
-        <form action="https://formspree.io/f/xqezzvbz" method="POST">
+        <form id="footerForm" method="POST">
           <label> Your email: <input type="email" name="email" /> </label>
           <label> Your message: <textarea name="message"></textarea></label>
           <!-- your other form fields go here -->
@@ -487,7 +456,7 @@
 
       <div class="footer-bottom">
         © <span id="footer-year"></span> Basit Ali. All Rights Reserved.
-        <span class="powered-by">Powered by <strong>Basit Ali</strong></span>
+        <span class="powered-by">Powered by <strong>Basit Ali Shams</strong></span>
       </div>
     </footer>
     <!-- Hire Me Modal -->
@@ -497,7 +466,7 @@
 
     <h3>Hire Muhammad Basit Ali</h3>
 
-    <form action="https://formspree.io/f/xrezqbpq" method="POST">
+    <form  id="hireForm" method="POST">
       
       <!-- Your Name (Auto Filled) -->
       <label>
@@ -539,13 +508,13 @@
   </div>
 </div>
 
-    <a
+    <!-- <a
       href="https://wa.me/923367297230?text=Hi%20Basit%2C%20I%20saw%20your%20portfolio"
       class="floating-whatsapp" id="whatsappBtn" 
       target="_blank"
     >
       <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    </a> -->
 
     <button class="back-to-top">
       <i class="fa-solid fa-arrow-up"></i>
